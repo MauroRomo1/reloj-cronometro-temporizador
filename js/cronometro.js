@@ -3,6 +3,7 @@ const spanSegundos = document.getElementById("segundos");
 const spanMinutos = document.getElementById("minutos");
 const spanHoras = document.getElementById("horas");
 
+const btnResetCrono = document.getElementById("btnResetCrono");
 const btnPlayCrono = document.getElementById("btnPlayCrono");
 const btnPauseCrono = document.getElementById("btnPauseCrono");
 
@@ -14,7 +15,6 @@ let hr = "0" + 0;
 let startTimer = null;
 
 const play = () => {
-  console.log("clicks");
   btnPlayCrono.setAttribute("disabled", "");
   btnPauseCrono.removeAttribute("disabled");
   startTimer = setInterval(() => {
@@ -48,12 +48,27 @@ const stop = () => {
   clearInterval(startTimer);
 };
 
+const reset = () => {
+  btnPlayCrono.removeAttribute("disabled");
+  btnPauseCrono.removeAttribute("disabled");
+  clearInterval(startTimer);
+  ms = "0" + 0;
+  sec = "0" + 0;
+  min = "0" + 0;
+  hr = "0" + 0;
+  putValue();
+};
+
 const putValue = () => {
   spanMilisegundos.innerHTML = ms;
   spanSegundos.innerHTML = sec;
   spanMinutos.innerHTML = min;
   spanHoras.innerHTML = hr;
 };
+
+btnResetCrono.addEventListener("click", () => {
+  reset();
+});
 
 btnPlayCrono.addEventListener("click", () => {
   play();

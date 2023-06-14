@@ -3,6 +3,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99));
+  font-family: "Righteous", cursive;
 }
 
 footer {
