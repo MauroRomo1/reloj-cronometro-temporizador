@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(rgb(17, 24, 39), rgb(75, 85, 99));
+}
+
+footer {
+  margin-top: auto;
+}
