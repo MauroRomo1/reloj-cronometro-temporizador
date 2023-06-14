@@ -8,3 +8,11 @@ body {
 footer {
   margin-top: auto;
 }
+
+.links:hover {
+  filter: drop-shadow(0px 0px 10px #000);
+}
+
+.hoyFecha {
+  box-shadow: 0px 3px 10px 1px #ffffff;
+}
